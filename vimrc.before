@@ -1,0 +1,6 @@
+"
+" Disable unwanted plugins
+"
+
+call janus#disable_plugin('vimwiki', 'Disabled in .vimrc.before')
+call janus#disable_plugin('css-colors', 'Disabled in .vimrc.before')

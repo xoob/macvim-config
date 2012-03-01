@@ -1,0 +1,18 @@
+[submodule "colorscheme.ego"]
+	path = colorscheme.ego
+	url = https://github.com/geetarista/ego.vim.git
+[submodule "colorscheme.tomorrow"]
+	path = colorscheme.tomorrow
+	url = https://github.com/matthewotto/Vim-Tomorrow-Theme.git
+[submodule "plugin.checksyntax"]
+	path = plugin.checksyntax
+	url = https://github.com/tomtom/checksyntax_vim.git
+[submodule "plugin.align"]
+	path = plugin.align
+	url = https://github.com/tsaleh/vim-align.git
+[submodule "plugin.sparkup"]
+	path = plugin.sparkup
+	url = https://github.com/kogakure/vim-sparkup.git
+[submodule "bundle.php-integration"]
+	path = bundle.php-integration
+	url = git@github.com:xoob/PIV.git
