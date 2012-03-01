@@ -70,8 +70,8 @@ hi Boolean                   guifg=#d31895
 hi Identifier                guifg=#eeeeee
 hi Function                  guifg=#eeeeee
 
-hi Special                   guifg=#dadbdf
-hi Operator                  guifg=#dadbdf
+hi Special                   guifg=#acadb1
+hi Operator                  guifg=#acadb1
 
 hi PreProc                   guifg=#e57c48
 hi Constant                  guifg=#e57c48

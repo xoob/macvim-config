@@ -2,7 +2,6 @@
 " Text Editing
 "
 
-
 set viminfo='100           " store marks
 set viminfo+=:500          " store command history
 set viminfo+=<0            " do not store registers
@@ -34,3 +33,8 @@ set formatoptions-=o       " don't continue comments after hitting 'o' or 'O' in
 
 " highlight tabs and trailing spaces
 set listchars+=tab:►⋅,trail:⋅
+
+set wildignore+=.DS_Store
+set wildignore+=Icon\?
+set wildignore+=.settings
+set wildignore+=.git*

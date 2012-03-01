@@ -1,0 +1,5 @@
+" restore Cmd-t for tabs and use Cmd-p for ctrlp
+if has('gui_macvim')
+    macmenu &File.New\ Tab key=<D-t>
+    macmenu &File.Print key=<D-S-p>
+endif

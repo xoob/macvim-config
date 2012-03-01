@@ -1,0 +1,22 @@
+snippet ex
+	throw new ${1:Zend_Exception}('${2}');${3}
+snippet var
+	${1:protected} $_${2:varName}${3: = array()};${4}
+snippet vd
+	var_dump(${1}); exit;${2}
+snippet zd
+	Zend_Debug::dump(${1}); exit;${2}
+snippet post
+	if ($this->getRequest()->isPost()) {
+		if ($form->isValid($this->getRequest()->getPost())) {
+
+		}
+	}
+snippet elem
+	$this->addElement('${1:type}', '${2:name}', array(
+		'label' => '${3}',
+		'required' => true,
+		'validators' => array(
+			${4}
+		)
+	));

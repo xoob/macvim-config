@@ -12,6 +12,7 @@ if has('gui_running')
 
     set guioptions-=T     " hide toolbar
     set guioptions-=rL    " hide scrollbars
+    set showtabline=2     " always show tabs
 
     set transparency=2    " subtle transparency
 
