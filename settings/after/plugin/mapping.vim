@@ -20,3 +20,8 @@ nmap Q gqap
 
 " map for runinning make checks
 map ; :make<CR>
+
+" common typos
+noremap :Wq :wq
+noremap :W :w
+noremap :Q :q

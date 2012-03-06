@@ -50,6 +50,11 @@ hi VertSplit        gui=NONE guifg=#666666 guibg=#666666
 hi Pmenu                     guifg=#aaaaaa guibg=#333333
 hi PmenuSel                  guifg=#333333 guibg=#00a0ff
 
+hi DiffDelete       gui=NONE guifg=#161616 guibg=#161616
+hi DiffAdd          gui=NONE guifg=#dadbdf guibg=#045349
+hi DiffChange                              guibg=#161616
+hi DiffText         gui=NONE guifg=#dadbdf guibg=#063f7a
+
 "
 " Common Syntax
 "
@@ -172,6 +177,6 @@ hi link dosiniNumber                    Normal
 
 hi link diffLine                        NonText
 hi link diffFile                        NonText
+hi link diffAdded                       DiffAdd
 
-hi diffRemoved guifg=#ff7f7f
-hi diffAdded   guifg=#80ff80
+hi diffRemoved gui=NONE guifg=#dadbdf guibg=#790606

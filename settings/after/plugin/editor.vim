@@ -31,6 +31,8 @@ set shiftround             " round to 'shiftwidth' for "<<" and ">>"
 set formatoptions+=1       " don't break a line after a one-letter word but before
 set formatoptions-=o       " don't continue comments after hitting 'o' or 'O' in Normal mode.
 
+set completeopt+=menuone   " use menu also when there is only one match
+
 " highlight tabs and trailing spaces
 set listchars+=tab:►⋅,trail:⋅
 

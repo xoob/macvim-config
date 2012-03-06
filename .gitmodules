@@ -16,3 +16,9 @@
 [submodule "bundle.php-integration"]
 	path = bundle.php-integration
 	url = git@github.com:xoob/PIV.git
+[submodule "ftplugin.help-shortcuts"]
+	path = ftplugin.help-shortcuts
+	url = https://github.com/juanpabloaj/help.vim.git
+[submodule "plugin.acp"]
+	path = plugin.acp
+	url = https://github.com/vim-scripts/AutoComplPop.git
