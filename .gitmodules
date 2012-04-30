@@ -19,6 +19,9 @@
 [submodule "ftplugin.help-shortcuts"]
 	path = ftplugin.help-shortcuts
 	url = https://github.com/juanpabloaj/help.vim.git
-[submodule "plugin.acp"]
-	path = plugin.acp
-	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "plugin.neocomplcache"]
+	path = plugin.neocomplcache
+	url = https://github.com/Shougo/neocomplcache
+[submodule "plugin.nerdtree-tabs"]
+	path = plugin.nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git

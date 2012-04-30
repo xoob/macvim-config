@@ -14,12 +14,16 @@ let g:ctrlp_custom_ignore = {
 " Tagbar
 "
 
-let g:tagbar_singleclick = 1    " single- instead of double-click to jump
+let g:tagbar_type_php  = {
+    \ 'ctagstype' : 'php',
+        \ 'kinds' : [
+            \ 'f:functions',
+        \ ]
+    \ }
 
-" open automatically for supported files
-autocmd FileType * nested :call tagbar#autoopen(0)
+let g:tagbar_ctags_bin = "/usr/local/bin/ctags"     " hardcode path to ctags
+let g:tagbar_singleclick = 1                        " single- instead of double-click to jump
 
-" only for some file types...
-" autocmd FileType c,cpp nested :TagbarOpen
-
-" reduced definition for PHP tags
+if has('gui_running')
+    autocmd BufEnter * nested :call tagbar#autoopen(0)  " auto open
+endif

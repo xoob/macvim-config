@@ -3,6 +3,10 @@
 "
 
 call janus#disable_plugin('vimwiki', 'Disabled in ~/.janus/vimrc.before')
-call janus#disable_plugin('css-color', 'Disabled in ~/.janus/vimrc.before')
+call janus#disable_plugin('css-color', 'Disabled in ~/.janus/vimrc.before') " slow
+call janus#disable_plugin('syntastic', 'Disabled in ~/.janus/vimrc.before') " slow
 
-call janus#disable_plugin('supertab') " replaced by plugin.acp
+call janus#disable_plugin('supertab')          " replaced by plugin.acp
+call janus#disable_plugin('snipmate-snippets') " avoid snippet conflicts. we maintain our own
+
+call janus#disable_plugin('plugin.acp')

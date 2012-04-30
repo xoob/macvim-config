@@ -14,13 +14,13 @@ if has('gui_running')
     set guioptions-=rL    " hide scrollbars
     set showtabline=2     " always show tabs
 
-    set transparency=2    " subtle transparency
+    " set transparency=2    " subtle transparency
 
     " remove Buffers menu
-    aunmenu Buffers
+    " aunmenu Buffers
 
     " remove Themes menu
-    aunmenu Themes
+    " aunmenu Themes
 else
     " for Terminal
     colorscheme desert
