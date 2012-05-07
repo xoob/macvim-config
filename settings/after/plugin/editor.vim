@@ -24,8 +24,8 @@ set tabstop=4              " a tab is four spaces
 set shiftwidth=4           " an autoindent (with <<) is four spaces
 set shiftround             " round to 'shiftwidth' for "<<" and ">>"
 
-" set autoindent           " set the indent of a new line
-" set smartindent          " be smart about it
+set autoindent             " set the indent of a new line
+set smartindent            " be smart about it
 " set indentkeys==0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\  " indentation triggers
 
 set formatoptions+=1       " don't break a line after a one-letter word but before

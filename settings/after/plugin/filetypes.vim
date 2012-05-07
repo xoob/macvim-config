@@ -17,8 +17,11 @@ if has('autocmd')
         set completeopt+=menuone
     augroup END
 
-    augroup FileTypeDetect
-        autocmd BufEnter *.phtml set syn=php
-        autocmd BufEnter *.less  set syn=scss
-    augroup END
+    autocmd BufNewFile,BufRead *.phtml set filetype=php
+    autocmd BufNewFile,BufRead *.phtml setlocal sw=2 ts=2
+    autocmd BufNewFile,BufRead *.phtml let b:PHP_outdentphpescape = 1
+
+    autocmd FileType html setlocal sw=2 ts=2
+    autocmd FileType css  setlocal sw=2 ts=2
+    autocmd FileType less setlocal sw=2 ts=2
 endif

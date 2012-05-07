@@ -2,8 +2,9 @@
 " PHP Syntax
 "
 
-let php_sql_query=0                 " no SQL syntax highlighting inside strings
-let g:DisableAutoPHPFolding = 1     " no folding for PHP files
+let php_sql_query           = 0 " no SQL syntax highlighting inside strings
+let g:DisableAutoPHPFolding = 1 " no folding for PHP files
+let g:PHP_outdentphpescape  = 0 " indent PHP tags as the surrounding code
 
 "
 " PHPDocumentor Plugin
@@ -32,5 +33,3 @@ vnoremap <C-p> :call PhpDocRange()<CR>
 " TODO
 " - follow list of plugins at http://spf13.com/project/piv
 " - fetch list of functions for syntax/php.vim from http://lerdorf.com/funclist.txt or http://svn.php.net/viewvc/phpdoc/doc-base/trunk/funclist.txt?view=co
-" - better indenting (?) - https://github.com/2072/PHP-Indenting-for-VIm
-" - open tagbar automatically

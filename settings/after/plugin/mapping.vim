@@ -23,9 +23,11 @@ nmap Q gqap
 map ; :make<CR>
 
 " common typos
-noremap :Wq :wq
-noremap :W :w
-noremap :Q :q
+cmap W w
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+cmap Retab retab
 
 " escape() shortcut
 " vnoremap <Leader>' xi$this->escape(<ESC>pa)<ESC>V:s/;/ /<CR>/<?=<CR>

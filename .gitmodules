@@ -25,3 +25,15 @@
 [submodule "plugin.nerdtree-tabs"]
 	path = plugin.nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "plugin.neocomplcache-snippets-complete"]
+	path = plugin.neocomplcache-snippets-complete
+	url = https://github.com/Shougo/neocomplcache-snippets-complete.git
+[submodule "syntax.css3"]
+	path = syntax.css3
+	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "syntax.less"]
+	path = syntax.less
+	url = https://github.com/groenewege/vim-less
+[submodule "syntax.html5"]
+	path = syntax.html5
+	url = https://github.com/othree/html5.vim
