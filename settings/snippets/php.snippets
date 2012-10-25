@@ -1,240 +1,67 @@
 snippet php
 	<?php
+	/**
+	 * Helpdesk (http://www.helpdeskhq.com)
+	 *
+	 * Copyright (C) 2012  Alexander Brausewetter
+	 * 
+	 * This program is free software: you can redistribute it and/or modify
+	 * it under the terms of the GNU Affero General Public License as
+	 * published by the Free Software Foundation, either version 3 of the
+	 * License, or (at your option) any later version.
+	 * 
+	 * This program is distributed in the hope that it will be useful,
+	 * but WITHOUT ANY WARRANTY; without even the implied warranty of
+	 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	 * GNU Affero General Public License for more details.
+	 * 
+	 * You should have received a copy of the GNU Affero General Public License
+	 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	 *
+	 * @copyright  Copyright (C) 2012  Alexander Brausewetter
+	 * @license    http://www.gnu.org/licenses/agpl.html  GNU Affero General Public License
+	 * @package    Helpdesk\Core
+	 */
+	
 	${1}
-	?>
-snippet phpil
-	<?php ${1} ?>
-snippet ec
-	echo "${1:string}"${2};
-snippet ethis
-	<?php echo $this->${1:something}; ?>
-snippet inc
-	include '${1:file}';${2}
-snippet inc1
-	include_once '${1:file}';${2}
-snippet req
-	require '${1:file}';${2}
-snippet req1
-	require_once '${1:file}';${2}
-# $GLOBALS['...']
-snippet globals
-	$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}${5}
-snippet G
-	$GLOBALS['${1:variable}']
-snippet $_ COOKIE['...']
-	$_COOKIE['${1:variable}']${2}
-snippet $_ ENV['...']
-	$_ENV['${1:variable}']${2}
-snippet $_ FILES['...']
-	$_FILES['${1:variable}']${2}
-snippet $_ Get['...']
-	$_GET['${1:variable}']${2}
-snippet $_ POST['...']
-	$_POST['${1:variable}']${2}
-snippet $_ REQUEST['...']
-	$_REQUEST['${1:variable}']${2}
-snippet $_ SERVER['...']
-	$_SERVER['${1:variable}']${2}
-snippet $_ SESSION['...']
-	$_SESSION['${1:variable}']${2}
-# Start Docblock
-snippet /*
-	/**
-	 * ${1}
-	 */
-# Class - post doc
-snippet doc_cp
-	/**
-	 * ${1:undocumented class}
-	 *
-	 * @package ${2:default}
-	 * @subpackage ${3:default}
-	 * @author ${4:`g:snips_author`}
-	 */${5}
-# Class Variable - post doc
-snippet doc_vp
-	/**
-	 * ${1:undocumented class variable}
-	 *
-	 * @var ${2:string}
-	 */${3}
-# Class Variable
-snippet doc_v
-	/**
-	 * ${3:undocumented class variable}
-	 *
-	 * @var ${4:string}
-	 */
-	${1:var} $${2};${5}
-# Class
-snippet doc_c
-	/**
-	 * ${3:undocumented class}
-	 *
-	 * @package ${4:default}
-	 * @subpackage ${5:default}
-	 * @author ${6:`g:snips_author`}
-	 */
-	${1:}class ${2:}
-	{
-		${7}
-	} // END $1class $2
-# Constant Definition - post doc
-snippet doc_dp
-	/**
-	 * ${1:undocumented constant}
-	 */${2}
-# Constant Definition
-snippet doc_d
-	/**
-	 * ${3:undocumented constant}
-	 */
-	define(${1}, ${2});${4}
-# Function - post doc
-snippet doc_fp
-	/**
-	 * ${1:undocumented function}
-	 *
-	 * @return ${2:void}
-	 * @author ${3:`g:snips_author`}
-	 */${4}
-# Function signature
-snippet doc_s
-	/**
-	 * ${4:undocumented function}
-	 *
-	 * @return ${5:void}
-	 * @author ${6:`g:snips_author`}
-	 */
-	${1}function ${2}(${3});${7}
-# Function
-snippet doc_f
-	/**
-	 * ${4:undocumented function}
-	 *
-	 * @return ${5:void}
-	 * @author ${6:`g:snips_author`}
-	 */
-	${1}function ${2}(${3})
-	{${7}
-	}
-# Header
-snippet doc_h
-	/**
-	 * ${1}
-	 *
-	 * @author ${2:`g:snips_author`}
-	 * @version ${3:$Id$}
-	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
-	 * @package ${5:default}
-	 */
-
-# Interface
-snippet doc_i
-	/**
-	 * ${2:undocumented class}
-	 *
-	 * @package ${3:default}
-	 * @author ${4:`g:snips_author`}
-	 */
-	interface ${1:}
-	{${5}
-	} // END interface $1
+snippet lphp
+	<? ${1} ?>
+snippet le
+	<?= ${1} ?>
+snippet lethis
+	<?= $this->${1} ?>
+snippet lif
+	<? if (${1}) : ?>
+		${2}
+snippet lels
+	<? else : ?>
+		${1}
+snippet leif
+	<? endif ?>
 # class ...
 snippet class
 	class ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
 	{
-		public function ${2:__construct}(${3:argument})
+		/**
+		 * Constructor
+		 */
+		public function __construct()
 		{
-			${4:// code...}
 		}
 	}
-# define(...)
-snippet def
-	define('${1}'${2});${3}
-# defined(...)
-snippet def?
-	${1}defined('${2}')${3}
-snippet wh
-	while (${1:/* condition */}) {
-		${2:// code...}
-	}
-# do ... while
-snippet do
-	do {
-		${2:// code... }
-	} while (${1:/* condition */});
 snippet if
-	if (${1:/* condition */}) {
-		${2:// code...}
+	if (${1}) {
+		${2}
 	}
-snippet ifil
-	<? if (${1:/* condition */}) : ?>
-		${2:<!-- code... -->}
-	<? endif ?>
-snippet ife
-	if (${1:/* condition */}) {
-		${2:// code...}
-	} else {
-		${3:// code...}
-	}
-	${4}
-snippet ifeil
-	<? if (${1:/* condition */}) : ?>
-		${2:<!-- html... -->}
-	<? else : ?>
-		${3:<!-- html... -->}
-	<? endif ?>
-	${4}
-snippet else
-	else {
-		${1:// code...}
-	}
-snippet elseif
-	elseif (${1:/* condition */}) {
-		${2:// code...}
-	}
-# Tertiary conditional
-snippet t
-	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
-snippet switch
-	switch ($${1:variable}) {
-		case '${2:value}':
-			${3:// code...}
-			break;
-		${5}
-		default:
-			${4:// code...}
-			break;
-	}
-snippet case
-	case '${1:value}':
-		${2:// code...}
-		break;${3}
-snippet for
-	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
-		${4: // code...}
-	}
-snippet foreach
-	foreach ($${1:variable} as $${2:value}) {
-		${3:// code...}
-	}
-snippet foreachil
-	<?php foreach ($${1:variable} as $${2:value}): ?>
-		${3:<!-- html... -->}
-	<?php endforeach; ?>
-snippet foreachk
-	foreach ($${1:variable} as $${2:key} => $${3:value}) {
-		${4:// code...}
-	}
-snippet foreachkil
-	<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
-		${4:<!-- html... -->}
-	<?php endforeach; ?>
 snippet fun
-	${1:public }function ${2:FunctionName}(${3})
+	protected function ${1:functionName}(${2})
 	{
-		${4:// code...}
+		${3}
+	}
+snippet pun
+	public function ${1:functionName}(${2})
+	{
+		${3}
 	}
 # $... = array (...)
 snippet array
@@ -249,40 +76,38 @@ snippet lambda
 	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) {
 		${4}
 	};
-# pre_dump();
-snippet pd
-	echo '<pre>'; var_dump(${1}); echo '</pre>';
-# pre_dump(); die();
-snippet pdd
-	echo '<pre>'; var_dump(${1}); echo '</pre>'; die(${2:});
-snippet http_redirect
-	header ("HTTP/1.1 301 Moved Permanently"); 
-	header ("Location: ".URL); 
-	exit();
 # Getters & Setters
 snippet set
-	public function set${1:VarName}($${2:varName})
+	/**
+	 * Set the ${1:parameter desc}
+	 *
+	 * @param  ${2:string} $${3:param}
+	 * @return ${4:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+	 */
+	public function set${5:Param}($$3)
 	{
-		$this->_$2 = $$2;
+		$this->$3 = $$3;
+		return $this;
 	}
 
-	public function get$1()
+	/**
+	 * Get the $1
+	 *
+	 * @return $2
+	 */
+	public function get$5()
 	{
-		return $this->_$2;
+		return $this->$3;
 	}
-snippet rett
-	return true;
-snippet retf
-	return false;
 # Customized
 snippet ex
 	throw new ${1:Zend_Exception}('${2}');${3}
 snippet var
-	${1:protected} $_${2:varName};${3}
+	${1:protected} $${2:varName};${3}
 snippet vd
 	var_dump(${1}); exit;${2}
 snippet zd
-	Zend_Debug::dump(${1}); exit;${2}
+	\Zend\Debug\Debug::dump(${1}); exit;${2}
 snippet post
 	if ($this->getRequest()->isPost()) {
 		if ($form->isValid($this->getRequest()->getPost())) {
@@ -298,11 +123,6 @@ snippet elem
 		),
 	));
 
-snippet pun
-	public function ${1:functionName}(${2})
-	{
-		${3}
-	}
 snippet res
 	$result = ${1};
 snippet retres

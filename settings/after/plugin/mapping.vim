@@ -3,7 +3,6 @@
 "
 
 " map NERDTree to <leader>]
-" call janus#add_mapping('nerdtree', 'map', '<leader>]', ':NERDTreeToggle<CR>')
 call janus#add_mapping('nerdtree', 'map', '<leader>]', ':NERDTreeTabsToggle<CR>')
 
 " restore Cmd-t for tabs and use Cmd-p for ctrlp
@@ -23,11 +22,11 @@ nmap Q gqap
 map ; :make<CR>
 
 " common typos
-cmap W w
-cmap WQ wq
-cmap wQ wq
-cmap Q q
-cmap Retab retab
+"cmap W w
+"cmap WQ wq
+"cmap wQ wq
+"cmap Q q
+"cmap Retab retab
 
 " escape() shortcut
 " vnoremap <Leader>' xi$this->escape(<ESC>pa)<ESC>V:s/;/ /<CR>/<?=<CR>

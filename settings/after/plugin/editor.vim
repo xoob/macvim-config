@@ -20,6 +20,7 @@ set wrap                   " wrap long lines (and disable horiz scrolling)
 set nofoldenable           " display all folds open
 set nohlsearch             " don't highlight search matches
 
+set expandtab              " spaces are used instead of tabs
 set tabstop=4              " a tab is four spaces
 set shiftwidth=4           " an autoindent (with <<) is four spaces
 set shiftround             " round to 'shiftwidth' for "<<" and ">>"

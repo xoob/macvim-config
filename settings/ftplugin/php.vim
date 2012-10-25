@@ -12,12 +12,12 @@ let g:PHP_outdentphpescape  = 0 " indent PHP tags as the surrounding code
 
 " Defaults
 let g:pdv_cfg_Type       = "mixed"
-let g:pdv_cfg_Package    = "Framework"
-let g:pdv_cfg_Package    = "Webdav"
-let g:pdv_cfg_Version    = "//autogen//"
+let g:pdv_cfg_Package    = ""
+let g:pdv_cfg_Package    = ""
+let g:pdv_cfg_Version    = ""
 let g:pdv_cfg_Author     = ""
-let g:pdv_cfg_Copyright  = "Copyright (c) 2010 All rights reserved."
-let g:pdv_cfg_License    = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
+let g:pdv_cfg_Copyright  = ""
+let g:pdv_cfg_License    = ""
 
 " Whether for PHP5 code PHP4 tags should be set, like @access,... (1|0)?
 let g:pdv_cfg_php4always = 0

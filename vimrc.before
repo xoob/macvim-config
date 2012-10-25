@@ -1,9 +1,17 @@
 " Disable unwanted plugins {
-    call janus#disable_plugin('css-color', 'Disabled in ~/.janus/vimrc.before') " slow
-    call janus#disable_plugin('syntastic', 'Disabled in ~/.janus/vimrc.before') " slow
-    call janus#disable_plugin('vimwiki',   'Disabled in ~/.janus/vimrc.before') " not used
-    call janus#disable_plugin('gundo',     'Disabled in ~/.janus/vimrc.before') " not used
+    call janus#disable_plugin('css-color',   'Disabled in ~/.janus/vimrc.before') " slow
+    call janus#disable_plugin('syntastic',   'Disabled in ~/.janus/vimrc.before') " slow
+    call janus#disable_plugin('gundo',       'Disabled in ~/.janus/vimrc.before') " not used
+    call janus#disable_plugin('zoomwin',     'Disabled in ~/.janus/vimrc.before') " not used
+    call janus#disable_plugin('buffergator', 'Disabled in ~/.janus/vimrc.before') " not used
 
-    call janus#disable_plugin('supertab')          " replaced by plugin.acp
+    call janus#disable_plugin('supertab')          " replaced by neocomplcache
     call janus#disable_plugin('snipmate-snippets') " avoid snippet conflicts. we maintain our own
+" }
+
+" Disable neocompletecache in sudo {
+    if $SUDO_USER != ''
+        call janus#disable_plugin('plugin.neocomplcache')
+        call janus#disable_plugin('plugin.neosnippet')
+    endif
 " }
